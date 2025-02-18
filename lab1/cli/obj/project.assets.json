@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "dll/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/dll.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/dll.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "dll/1.0.0": {
+      "type": "project",
+      "path": "../dll/dll.csproj",
+      "msbuildProject": "../dll/dll.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "dll >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/replica/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/mnt/workspace/notes/1_Prod/prog/lab1/cli/cli.csproj",
+      "projectName": "cli",
+      "projectPath": "/mnt/workspace/notes/1_Prod/prog/lab1/cli/cli.csproj",
+      "packagesPath": "/home/replica/.nuget/packages/",
+      "outputPath": "/mnt/workspace/notes/1_Prod/prog/lab1/cli/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/replica/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/mnt/workspace/notes/1_Prod/prog/lab1/dll/dll.csproj": {
+              "projectPath": "/mnt/workspace/notes/1_Prod/prog/lab1/dll/dll.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/nix/store/9rm1rfc7llb95ss12vb7708ivmxwmpdl-dotnet-sdk-8.0.405/share/dotnet/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
