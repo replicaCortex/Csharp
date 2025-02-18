@@ -1,0 +1,11 @@
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\bin\Release\net8.0\ClassLibrary1.deps.json
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\bin\Release\net8.0\ClassLibrary1.dll
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\bin\Release\net8.0\ClassLibrary1.pdb
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.AssemblyInfoInputs.cache
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.AssemblyInfo.cs
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.dll
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\refint\ClassLibrary1.dll
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ClassLibrary1.pdb
+C:\Users\replica\Desktop\Csharp\2lab\ClassLibrary1\obj\Release\net8.0\ref\ClassLibrary1.dll
