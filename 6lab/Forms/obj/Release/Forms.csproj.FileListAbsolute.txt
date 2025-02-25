@@ -1,0 +1,14 @@
+C:\Users\replica\Desktop\Csharp\6lab\Forms\bin\Release\Forms.exe.config
+C:\Users\replica\Desktop\Csharp\6lab\Forms\bin\Release\Forms.exe
+C:\Users\replica\Desktop\Csharp\6lab\Forms\bin\Release\Forms.pdb
+C:\Users\replica\Desktop\Csharp\6lab\Forms\bin\Release\dll.dll
+C:\Users\replica\Desktop\Csharp\6lab\Forms\bin\Release\dll.pdb
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.csproj.AssemblyReference.cache
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.pdb
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\AC2C1ABA-CCF6-44D4-8127-588FD4D0A860-DeferredValidationErrors.xml
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.Properties.Resources.resources
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.csproj.GenerateResource.cache
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.csproj.CoreCompileInputs.cache
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.csproj.Up2Date
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.exe
+C:\Users\replica\Desktop\Csharp\6lab\Forms\obj\Release\Forms.Form1.resources

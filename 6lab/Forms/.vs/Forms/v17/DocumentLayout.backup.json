@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\codeactivity1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:codeactivity1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EF40139-2D49-4B16-8D0F-60B7A6E9EBEE}|..\\dll\\dll.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\dll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:44:42.357Z",
+              "IsPinned": true,
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:33:37.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CodeActivity1.cs",
+              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\CodeActivity1.cs",
+              "RelativeDocumentMoniker": "CodeActivity1.cs",
+              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\CodeActivity1.cs",
+              "RelativeToolTip": "CodeActivity1.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAxwCQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T19:16:00.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\dll\\Class1.cs",
+              "RelativeDocumentMoniker": "..\\dll\\Class1.cs",
+              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\dll\\Class1.cs",
+              "RelativeToolTip": "..\\dll\\Class1.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAA8wE4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T18:39:09.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
