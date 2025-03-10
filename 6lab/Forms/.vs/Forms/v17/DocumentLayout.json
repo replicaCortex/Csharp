@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\workflow\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:workflow\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\workflow\\savecaractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:workflow\\savecaractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\workflow\\createcaractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:workflow\\createcaractivity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,7 +15,8 @@
       "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EF40139-2D49-4B16-8D0F-60B7A6E9EBEE}|..\\dll\\dll.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\dll\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|c:\\users\\replica\\desktop\\csharp\\6lab\\forms\\workflow\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9FB921D-8795-4D66-AE10-478279C77598}|Forms.csproj|solutionrelative:workflow\\workflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -50,13 +43,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Workflow.cs",
               "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\Workflow.cs",
               "RelativeDocumentMoniker": "Workflow\\Workflow.cs",
               "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\Workflow.cs",
               "RelativeToolTip": "Workflow\\Workflow.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T20:47:17.982Z",
               "EditorCaption": ""
@@ -64,53 +57,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SaveCarActivity.cs",
-              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\SaveCarActivity.cs",
-              "RelativeDocumentMoniker": "Workflow\\SaveCarActivity.cs",
-              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\SaveCarActivity.cs*",
-              "RelativeToolTip": "Workflow\\SaveCarActivity.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T20:46:49.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAUwIIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAYwHsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T18:33:37.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CreateCarActivity.cs",
               "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\CreateCarActivity.cs",
               "RelativeDocumentMoniker": "Workflow\\CreateCarActivity.cs",
               "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\Forms\\Workflow\\CreateCarActivity.cs",
               "RelativeToolTip": "Workflow\\CreateCarActivity.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T19:16:00.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\dll\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\dll\\Class1.cs",
-              "ToolTip": "C:\\Users\\replica\\Desktop\\Csharp\\6lab\\dll\\Class1.cs",
-              "RelativeToolTip": "..\\dll\\Class1.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAA8wE4AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T18:39:09.025Z",
               "EditorCaption": ""
             },
             {
