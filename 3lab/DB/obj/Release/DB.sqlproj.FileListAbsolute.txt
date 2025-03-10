@@ -1,0 +1,6 @@
+C:\Users\replica\Desktop\Csharp\3lab\DB\bin\Release\DB.dacpac
+C:\Users\replica\Desktop\Csharp\3lab\DB\bin\Release\DB.dll
+C:\Users\replica\Desktop\Csharp\3lab\DB\bin\Release\DB.pdb
+C:\Users\replica\Desktop\Csharp\3lab\DB\obj\Release\DB.sqlproj.AssemblyReference.cache
+C:\Users\replica\Desktop\Csharp\3lab\DB\obj\Release\DB.dll
+C:\Users\replica\Desktop\Csharp\3lab\DB\obj\Release\DB.pdb

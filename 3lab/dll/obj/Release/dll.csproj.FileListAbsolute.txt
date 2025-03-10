@@ -1,0 +1,12 @@
+C:\Users\replica\Desktop\Csharp\6lab\dll\bin\Release\dll.dll
+C:\Users\replica\Desktop\Csharp\6lab\dll\bin\Release\dll.pdb
+C:\Users\replica\Desktop\Csharp\6lab\dll\obj\Release\dll.csproj.AssemblyReference.cache
+C:\Users\replica\Desktop\Csharp\6lab\dll\obj\Release\dll.csproj.CoreCompileInputs.cache
+C:\Users\replica\Desktop\Csharp\6lab\dll\obj\Release\dll.dll
+C:\Users\replica\Desktop\Csharp\6lab\dll\obj\Release\dll.pdb
+C:\Users\replica\Desktop\Csharp\3lab\dll\bin\Release\dll.dll
+C:\Users\replica\Desktop\Csharp\3lab\dll\bin\Release\dll.pdb
+C:\Users\replica\Desktop\Csharp\3lab\dll\obj\Release\dll.csproj.AssemblyReference.cache
+C:\Users\replica\Desktop\Csharp\3lab\dll\obj\Release\dll.csproj.CoreCompileInputs.cache
+C:\Users\replica\Desktop\Csharp\3lab\dll\obj\Release\dll.dll
+C:\Users\replica\Desktop\Csharp\3lab\dll\obj\Release\dll.pdb
