@@ -1,23 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using dll;
 using System.Activities;
+using System.IO;
+using System.Windows;
+using System.Xml.Serialization;
 
 namespace Forms.Workflow
 {
+    public sealed class SaveCarActivity : CodeActivity
+    {
+        public InArgument<Car> Car2Save { get; set; }
+        public InArgument<string> FilePath { get; set; }
+        protected override void Execute(CodeActivityContext context)
+        {
+            Car car = context.GetValue(Car2Save);
+            string filePath = context.GetValue(FilePath);
 
-	public sealed class SaveCarActivity : CodeActivity
-	{
-		// Определите входной аргумент действия типа string
-		public InArgument<string> Text { get; set; }
+            XmlSerializer serializer = new XmlSerializer(typeof(Car));
+            using (TextWriter writer = new StreamWriter(filePath))
+            {
+                serializer.Serialize(writer, car);
+            }
+            MessageBox.Show("Test SAVE");
+        }
 
-		// Если действие возвращает значение, создайте класс, производный от CodeActivity<TResult>
-		// и верните значение из метода Execute.
-		protected override void Execute(CodeActivityContext context)
-		{
-			// Получите значение входного аргумента Text во время выполнения
-			string text = context.GetValue(this.Text);
-		}
-	}
+
+    }
 }

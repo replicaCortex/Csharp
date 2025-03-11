@@ -120,15 +120,22 @@ namespace Forms
 
         private void TestWWF_Click(object sender, EventArgs e)
         {
-            bool Break = inputBreak.Checked;
-            int id = count_car;
-            string Model = inputModel.Text;
-            string Metal = inputAge.Text;
-            int Age = int.Parse(inputAge.Text);
+            //bool Break = inputBreak.Checked;
+            //int id = count_car;
+            //string Model = inputModel.Text;
+            //string Metal = inputAge.Text;
+            //int Age = int.Parse(inputAge.Text);
 
-            CarWorkflow workflow = new CarWorkflow(Model, Metal, Age, Break);
+            CarWorkflow workflow = new CarWorkflow(
+                model: "Toyota",
+                metal: "Steel",
+                age: 5,
+                breakStatus: false,
+                filePath: "car.xml"
+            );
 
-            // IDictionary<string, object> outputs = WorkflowInvoker.Invoke(workflowActivity);
+            // Запускаем рабочий процесс
+            WorkflowInvoker.Invoke(workflow.WorkflowActivity);
 
 
         }

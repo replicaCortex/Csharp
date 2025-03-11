@@ -283,13 +283,6 @@ namespace Forms.ServiceReference1 {
     public interface WebService1Soap {
         
         // CODEGEN: Контракт генерации сообщений с именем metal из пространства имен http://tempuri.org/ не отмечен как обнуляемый
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateMachine", ReplyAction="*")]
-        Forms.ServiceReference1.CreateMachineResponse CreateMachine(Forms.ServiceReference1.CreateMachineRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateMachine", ReplyAction="*")]
-        System.Threading.Tasks.Task<Forms.ServiceReference1.CreateMachineResponse> CreateMachineAsync(Forms.ServiceReference1.CreateMachineRequest request);
-        
-        // CODEGEN: Контракт генерации сообщений с именем metal из пространства имен http://tempuri.org/ не отмечен как обнуляемый
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CreateCars", ReplyAction="*")]
         Forms.ServiceReference1.CreateCarsResponse CreateCars(Forms.ServiceReference1.CreateCarsRequest request);
         
@@ -302,82 +295,6 @@ namespace Forms.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetAllCars", ReplyAction="*")]
         System.Threading.Tasks.Task<Forms.ServiceReference1.GetAllCarsResponse> GetAllCarsAsync(Forms.ServiceReference1.GetAllCarsRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CreateMachineRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CreateMachine", Namespace="http://tempuri.org/", Order=0)]
-        public Forms.ServiceReference1.CreateMachineRequestBody Body;
-        
-        public CreateMachineRequest() {
-        }
-        
-        public CreateMachineRequest(Forms.ServiceReference1.CreateMachineRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateMachineRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string metal;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int age;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public bool @break;
-        
-        public CreateMachineRequestBody() {
-        }
-        
-        public CreateMachineRequestBody(string metal, int age, bool @break) {
-            this.metal = metal;
-            this.age = age;
-            this.@break = @break;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class CreateMachineResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CreateMachineResponse", Namespace="http://tempuri.org/", Order=0)]
-        public Forms.ServiceReference1.CreateMachineResponseBody Body;
-        
-        public CreateMachineResponse() {
-        }
-        
-        public CreateMachineResponse(Forms.ServiceReference1.CreateMachineResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class CreateMachineResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int CreateMachineResult;
-        
-        public CreateMachineResponseBody() {
-        }
-        
-        public CreateMachineResponseBody(int CreateMachineResult) {
-            this.CreateMachineResult = CreateMachineResult;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -550,35 +467,6 @@ namespace Forms.ServiceReference1 {
         
         public WebService1SoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Forms.ServiceReference1.CreateMachineResponse Forms.ServiceReference1.WebService1Soap.CreateMachine(Forms.ServiceReference1.CreateMachineRequest request) {
-            return base.Channel.CreateMachine(request);
-        }
-        
-        public int CreateMachine(string metal, int age, bool @break) {
-            Forms.ServiceReference1.CreateMachineRequest inValue = new Forms.ServiceReference1.CreateMachineRequest();
-            inValue.Body = new Forms.ServiceReference1.CreateMachineRequestBody();
-            inValue.Body.metal = metal;
-            inValue.Body.age = age;
-            inValue.Body.@break = @break;
-            Forms.ServiceReference1.CreateMachineResponse retVal = ((Forms.ServiceReference1.WebService1Soap)(this)).CreateMachine(inValue);
-            return retVal.Body.CreateMachineResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Forms.ServiceReference1.CreateMachineResponse> Forms.ServiceReference1.WebService1Soap.CreateMachineAsync(Forms.ServiceReference1.CreateMachineRequest request) {
-            return base.Channel.CreateMachineAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<Forms.ServiceReference1.CreateMachineResponse> CreateMachineAsync(string metal, int age, bool @break) {
-            Forms.ServiceReference1.CreateMachineRequest inValue = new Forms.ServiceReference1.CreateMachineRequest();
-            inValue.Body = new Forms.ServiceReference1.CreateMachineRequestBody();
-            inValue.Body.metal = metal;
-            inValue.Body.age = age;
-            inValue.Body.@break = @break;
-            return ((Forms.ServiceReference1.WebService1Soap)(this)).CreateMachineAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

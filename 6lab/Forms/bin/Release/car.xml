@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Car xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Metal>Steel</Metal>
+  <Age>5</Age>
+  <Break>false</Break>
+  <Places>0</Places>
+  <engine>
+    <Work>false</Work>
+    <model_engine>None</model_engine>
+    <Cylinders>0</Cylinders>
+    <HorsePower>0</HorsePower>
+  </engine>
+  <Drive>false</Drive>
+  <id>0</id>
+  <Model>Toyota</Model>
+</Car>

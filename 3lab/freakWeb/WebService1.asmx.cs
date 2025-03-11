@@ -36,7 +36,7 @@ namespace freakWeb
                 }
 
 
-                string sql = "INSERT INTO Cars (Model, Places, Id) VALUES (@Model, @Places, @Id); SELECT SCOPE_IDENTITY();";
+                string sql = "INSERT INTO Car (Model, Places, Id) VALUES (@Model, @Places, @Id); SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -57,7 +57,7 @@ namespace freakWeb
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sql = "SELECT * FROM Cars";
+                string sql = "SELECT * FROM Car";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -70,8 +70,7 @@ namespace freakWeb
                                 id = (int)reader["Id"],
                                 Model = reader["Model"] == DBNull.Value ? null : (string)reader["Model"],
                                 Places = reader["Places"] == DBNull.Value ? 0 : (int)reader["Places"],
-                                Drive = reader["Drive"] == DBNull.Value ? false : (bool)reader["Drive"],
-
+                         
                             };
                             cars.Add(car);
                         }

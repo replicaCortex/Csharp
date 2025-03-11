@@ -90,9 +90,6 @@
     <None Include="Connected Services\ServiceReference1\Forms.ServiceReference1.CreateCarsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\Forms.ServiceReference1.CreateMachineResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServiceReference1\Forms.ServiceReference1.GetAllCarsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

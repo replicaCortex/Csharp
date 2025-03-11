@@ -1,10 +1,8 @@
-﻿using System;
+﻿using dll;
+using System;
 using System.Activities;
-using System.ComponentModel;
-using System.IO;
-using System.Windows.Forms;
-using System.Xml.Serialization;
-using dll;
+using System.ServiceModel.Channels;
+using System.Windows;
 
 namespace Forms
 {
@@ -33,6 +31,7 @@ namespace Forms
             };
 
             CustomCar.Set(context, car);
+            MessageBox.Show("Test CREATE");
         }
     }
 }
