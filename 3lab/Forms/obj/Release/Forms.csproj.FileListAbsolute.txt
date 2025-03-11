@@ -39,6 +39,3 @@ C:\Users\replica\Desktop\Csharp\3lab\Forms\obj\Release\Forms.csproj.CoreCompileI
 C:\Users\replica\Desktop\Csharp\3lab\Forms\obj\Release\Forms.csproj.Up2Date
 C:\Users\replica\Desktop\Csharp\3lab\Forms\obj\Release\Forms.exe
 C:\Users\replica\Desktop\Csharp\3lab\Forms\obj\Release\Forms.pdb
-C:\Users\replica\Desktop\Csharp\3lab\Forms\bin\Release\freakWeb.dll
-C:\Users\replica\Desktop\Csharp\3lab\Forms\bin\Release\freakWeb.pdb
-C:\Users\replica\Desktop\Csharp\3lab\Forms\bin\Release\freakWeb.dll.config

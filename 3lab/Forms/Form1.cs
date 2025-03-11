@@ -1,30 +1,22 @@
-﻿using System;
-using System.Activities;
-using System.Collections.Generic;
+﻿
+using Forms.ServiceReference1;
+using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Input;
 using System.Xml.Serialization;
-using dll;
-using Forms.Workflow;
-using freakWeb;
 
 namespace Forms
 {
-    public partial class Form1: Form
+    public partial class Form1 : Form
     {
         private BindingList<Car> car_list = new BindingList<Car>();
         public int count_car = 1;
         public Form1()
         {
             InitializeComponent();
-            dataGridView1.DataSource = car_list;
+            // dataGridView1.DataSource = car_list;
             comboBox1.Items.AddRange(new object[] { "id", "Metal", "Age", "Break" });
         }
 
@@ -56,16 +48,15 @@ namespace Forms
         {
             bool Break = inputBreak.Checked;
 
-            Car car = new Car
+            string Model = inputModel.Text;
+            string Metal = inputMetal.Text;
+            int Age = int.Parse(inputAge.Text);
+            int places = int.Parse(inputPlaces.Text);
+
+            using (WebService1SoapClient client = new WebService1SoapClient())
             {
-                id = count_car,
-                Model = inputModel.Text,
-                Metal = inputAge.Text,
-                Age = int.Parse(inputAge.Text),
-                Break = Break,
-            };
-            car_list.Add(car);
-            count_car++;
+                client.CreateCars(Metal, Age, Model, Break, places);
+            }
         }
         private void SaveCarToXml(BindingList<Car> car, string filePath)
         {
@@ -118,23 +109,23 @@ namespace Forms
             count_car++;
         }
 
-        private void TestWWF_Click(object sender, EventArgs e)
+
+        private async void Sql2grid_Click(object sender, EventArgs e)
         {
-            bool Break = inputBreak.Checked;
-            int id = count_car;
-            string Model = inputModel.Text;
-            string Metal = inputAge.Text;
-            int Age = int.Parse(inputAge.Text);
+            WebService1SoapClient client = new WebService1SoapClient();
 
-            CarWorkflow workflow = new CarWorkflow(Model, Metal, Age, Break);
+            ServiceReference1.GetAllCarsResponse response = await client.GetAllCarsAsync();
 
-            // IDictionary<string, object> outputs = WorkflowInvoker.Invoke(workflowActivity);
+            BindingList<ServiceReference1.Car> cars = new BindingList<ServiceReference1.Car>(response.Body.GetAllCarsResult);
 
+            dataGridView1.DataSource = cars;
 
+            if (client.State != System.ServiceModel.CommunicationState.Faulted)
+            {
+                client.Close();
+            }
         }
 
- 
     }
-
 }
 

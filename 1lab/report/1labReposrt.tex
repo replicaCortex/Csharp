@@ -1,0 +1,288 @@
+%! TeX program = lualatex
+
+\documentclass[12pt]{article}
+
+\usepackage{cmap}
+
+\usepackage[english, russian]{babel}
+
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{libertinus}
+\setmonofont{Source Code Pro}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor} % Цвета
+
+\usepackage{subfig}
+
+\usepackage{listings}
+
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage[mocha, textcolor=true, pagecolor=true]{catppuccinpalette}
+% \usepackage[latte, textcolor=true, pagecolor=true]{catppuccinpalette}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.796, 0.651, 0.969}
+\definecolor{codeBlue}{rgb}{0.537, 0.706, 0.980}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeBlue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    frame=leftline,
+    xleftmargin=8pt,
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\renewcommand{\lstlistingname}{}
+
+\begin{document}
+
+\begin{center}
+	\section*{Лабораторная работа №1}
+	Вариант №3
+\end{center}
+
+\noindent Листинг библиотеки классов (dll):
+
+\begin{lstlisting}[language=Python]
+using System;
+
+namespace dll
+{
+    public class Machine
+    {
+        public string Metal { get; set; } = "None";
+        public int Age { get; set; } = 0;
+        public bool Break { get; set; } = false;
+
+        public void Repair()
+        {
+            if (Break)
+            {
+                Break = false;
+                Console.WriteLine("Car is fixed");
+            }
+
+            else
+                Console.WriteLine("Car is in good condition");
+
+        }
+
+        public void setAge(int new_age)
+        {
+            Age = new_age;
+            Console.WriteLine($"Set age: {Age}");
+        }
+
+        public void ShowInfo()
+        {
+            string Status = Checking();
+            Console.WriteLine($"\nMachine age: {Age}\nStatus: {Status}\nMetal: {Metal}");
+        }
+
+        public string Checking()
+        {
+            if (!Break)
+                return "serviceable";
+            else
+                return "break";
+        }
+    }
+
+    public class Car : Machine
+    {
+        public int id { get; set; } = 0;
+        public string Model { get; set; } = "None";
+        public int Places = 0;
+        public Engine engine = new Engine();
+        public bool Drive = false;
+
+
+        public void DriveToggle()
+        {
+            if (Drive) { Drive = false; }
+            else { Drive = true; }
+
+            if (Drive && !Break)
+            {
+
+
+                if (!engine.Work)
+                {
+                    engine.Start();
+                }
+
+                Console.WriteLine("Drive");
+            }
+
+            else if (Break)
+            {
+                Drive = false;
+                Console.WriteLine("Car is broken!");
+            }
+            else
+            {
+                if (engine.Work)
+                {
+                    engine.Stop();
+                }
+                Console.WriteLine("Stop drive");
+            }
+        }
+
+        public void Honk() { Console.WriteLine("HONK!"); }
+
+        public void ReplaceEngine()
+        {
+            if (engine.Work) { engine.Stop(); }
+
+            Console.WriteLine("Model engine: ");
+            string model = Console.ReadLine();
+
+            Console.WriteLine("Cylinders engine: ");
+            int cylinders = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("HorsePower engine: ");
+            int horse_power = int.Parse(Console.ReadLine());
+
+            Engine new_engine = new Engine { model_engine = model, Cylinders = cylinders, HorsePower = horse_power };
+            engine = new_engine;
+
+        }
+
+        public void modelEngine()
+        {
+            Console.WriteLine(engine.model_engine);
+
+        }
+
+        public Car CreateCar()
+        {
+            Car newCar = new Car();
+
+            Console.WriteLine("Model: ");
+            newCar.Model = Console.ReadLine();
+
+            Console.WriteLine("Places: ");
+            newCar.Places = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("--Machine Properties--");
+            Console.WriteLine("Metal: ");
+            newCar.Metal = Console.ReadLine();
+
+            Console.WriteLine("Age: ");
+            newCar.Age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Break (true/false): ");
+            newCar.Break = bool.Parse(Console.ReadLine());
+
+            Console.WriteLine("--Engine Properties--");
+            /*newCar.engine = new Engine();*/
+            newCar.engine.createEngine();
+
+            return newCar;
+
+        }
+
+    }
+
+    public class Engine
+    {
+        public int id { get; set; } = 0;
+        public string model_engine { get; set; } = "None";
+        public int Cylinders { get; set; } = 0;
+        public int HorsePower { get; set; } = 0;
+        public bool Work = false;
+
+        public Engine createEngine()
+        {
+
+            Console.WriteLine("Model: ");
+            string Model_engine = Console.ReadLine();
+            Console.WriteLine("Cylinders: ");
+            int cylinders = int.Parse(Console.ReadLine());
+            Console.WriteLine("HorsePower: ");
+            int horsePower = int.Parse(Console.ReadLine());
+
+            return new Engine { Cylinders = Cylinders, HorsePower = horsePower, model_engine = Model_engine };
+        }
+
+        public void Start()
+        {
+            if (!Work) { Work = true; } else { Console.WriteLine("The engine is already running"); }
+        }
+
+        public void Stop()
+        {
+            if (Work) { Work = false; } else { Console.WriteLine("The engine is no longer running"); }
+        }
+
+
+        public void Upgrade(int extraHorsPower)
+        {
+            HorsePower = extraHorsPower;
+        }
+
+    }
+}
+\end{lstlisting}
+\vspace{12pt}
+
+\noindent Листинг консольного приложения
+
+\begin{lstlisting}[language=Python]
+using dll;
+
+class Program
+{
+    static public void Main()
+    {
+        bool exit = false;
+
+        do
+        {
+            Console.Clear();
+            Console.WriteLine("1. Create car");
+            Console.WriteLine("2. Info car");
+            Console.WriteLine("0. Exit");
+            int choice = int.Parse(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Car newCar = new Car();
+                    newCar.CreateCar();
+                    break;
+                case 0:
+                    exit = true;
+                    Console.Clear();
+                    break;
+            }
+
+        } while (!exit);
+    }
+}
+
+\end{lstlisting}
+
+\subsection*{Результаты работы программы:}
+
+\end{document}

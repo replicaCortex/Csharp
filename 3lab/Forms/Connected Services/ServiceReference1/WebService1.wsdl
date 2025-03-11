@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateMachine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="metal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="break" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMachineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateMachineResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCars">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="metal" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="model" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="break" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="places" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateCarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateCarsResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllCars">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllCarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCarsResult" type="tns:ArrayOfCar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Car">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Machine">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Places" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="engine" type="tns:Engine" />
+              <s:element minOccurs="1" maxOccurs="1" name="Drive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Model" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Machine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Metal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Age" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Break" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Engine">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Work" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="model_engine" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Cylinders" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HorsePower" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateMachineSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateMachine" />
+  </wsdl:message>
+  <wsdl:message name="CreateMachineSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateMachineResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateCarsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateCars" />
+  </wsdl:message>
+  <wsdl:message name="CreateCarsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateCarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCars" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCarsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCarsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="CreateMachine">
+      <wsdl:input message="tns:CreateMachineSoapIn" />
+      <wsdl:output message="tns:CreateMachineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCars">
+      <wsdl:input message="tns:CreateCarsSoapIn" />
+      <wsdl:output message="tns:CreateCarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCars">
+      <wsdl:input message="tns:GetAllCarsSoapIn" />
+      <wsdl:output message="tns:GetAllCarsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateMachine">
+      <soap:operation soapAction="http://tempuri.org/CreateMachine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCars">
+      <soap:operation soapAction="http://tempuri.org/CreateCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCars">
+      <soap:operation soapAction="http://tempuri.org/GetAllCars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateMachine">
+      <soap12:operation soapAction="http://tempuri.org/CreateMachine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCars">
+      <soap12:operation soapAction="http://tempuri.org/CreateCars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCars">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44378/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44378/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

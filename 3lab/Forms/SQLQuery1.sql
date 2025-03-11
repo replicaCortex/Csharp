@@ -1,1 +1,1 @@
-﻿SELECT * FROM Machines
+﻿SELECT * FROM Cars

@@ -19,11 +19,17 @@ namespace Forms
 
         protected override void Execute(CodeActivityContext context)
         {
-            int ageValue = context.GetValue(Age);
+            string model = Model.Get(context);
+            string metal = Metal.Get(context);
+            int age = Age.Get(context);
+            bool breakStatus = Break.Get(context);
 
             Car car = new Car
             {
-                Age = ageValue
+                Model = model,
+                Metal = metal,
+                Age = age,
+                Break = breakStatus
             };
 
             CustomCar.Set(context, car);

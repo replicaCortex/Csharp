@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms", "Forms.csproj", "{F9FB921D-8795-4D66-AE10-478279C77598}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6FEB269B-87FD-407A-8319-02F52DF8D5D9} = {6FEB269B-87FD-407A-8319-02F52DF8D5D9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll", "..\dll\dll.csproj", "{3EF40139-2D49-4B16-8D0F-60B7A6E9EBEE}"
 EndProject

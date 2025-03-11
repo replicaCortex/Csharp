@@ -1,0 +1,522 @@
+%! TeX program = lualatex
+
+\documentclass[12pt]{article}
+
+\usepackage{cmap}
+
+\usepackage[english, russian]{babel}
+
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{libertinus}
+\setmonofont{Source Code Pro}
+
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{xcolor} % Цвета
+
+\usepackage{subfig}
+
+\usepackage{listings}
+
+\usepackage[left=2.5cm, right=2.5cm, top=2cm, bottom=2cm]{geometry}
+
+\usepackage[mocha, textcolor=true, pagecolor=true]{catppuccinpalette}
+% \usepackage[latte, textcolor=true, pagecolor=true]{catppuccinpalette}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.796, 0.651, 0.969}
+\definecolor{codeBlue}{rgb}{0.537, 0.706, 0.980}
+
+\lstdefinestyle{mystyle}{
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeBlue},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    frame=leftline,
+    xleftmargin=8pt,
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+\renewcommand{\lstlistingname}{}
+
+\begin{document}
+
+\begin{center}
+	\section*{Лабораторная работа №3}
+	Вариант №3
+\end{center}
+
+\noindent Листинг библиотеки классов (dll):
+
+\begin{lstlisting}[language=Python]
+using System;
+
+namespace dll
+{
+    public class Machine
+    {
+        public string Metal { get; set; } = "None";
+        public int Age { get; set; } = 0;
+        public bool Break { get; set; } = false;
+
+        public void Repair()
+        {
+            if (Break)
+            {
+                Break = false;
+                Console.WriteLine("Car is fixed");
+            }
+
+            else
+                Console.WriteLine("Car is in good condition");
+
+        }
+
+        public void setAge(int new_age)
+        {
+            Age = new_age;
+            Console.WriteLine($"Set age: {Age}");
+        }
+
+        public void ShowInfo()
+        {
+            string Status = Checking();
+            Console.WriteLine($"\nMachine age: {Age}\nStatus: {Status}\nMetal: {Metal}");
+        }
+
+        public string Checking()
+        {
+            if (!Break)
+                return "serviceable";
+            else
+                return "break";
+        }
+    }
+
+    public class Car : Machine
+    {
+        public int id { get; set; } = 0;
+        public string Model { get; set; } = "None";
+        public int Places = 0;
+        public Engine engine = new Engine();
+        public bool Drive = false;
+
+
+        public void DriveToggle()
+        {
+            if (Drive) { Drive = false; }
+            else { Drive = true; }
+
+            if (Drive && !Break)
+            {
+
+
+                if (!engine.Work)
+                {
+                    engine.Start();
+                }
+
+                Console.WriteLine("Drive");
+            }
+
+            else if (Break)
+            {
+                Drive = false;
+                Console.WriteLine("Car is broken!");
+            }
+            else
+            {
+                if (engine.Work)
+                {
+                    engine.Stop();
+                }
+                Console.WriteLine("Stop drive");
+            }
+        }
+
+        public void Honk() { Console.WriteLine("HONK!"); }
+
+        public void ReplaceEngine()
+        {
+            if (engine.Work) { engine.Stop(); }
+
+            Console.WriteLine("Model engine: ");
+            string model = Console.ReadLine();
+
+            Console.WriteLine("Cylinders engine: ");
+            int cylinders = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("HorsePower engine: ");
+            int horse_power = int.Parse(Console.ReadLine());
+
+            Engine new_engine = new Engine { model_engine = model, Cylinders = cylinders, HorsePower = horse_power };
+            engine = new_engine;
+
+        }
+
+        public void modelEngine()
+        {
+            Console.WriteLine(engine.model_engine);
+
+        }
+
+        public Car CreateCar()
+        {
+            Car newCar = new Car();
+
+            Console.WriteLine("Model: ");
+            newCar.Model = Console.ReadLine();
+
+            Console.WriteLine("Places: ");
+            newCar.Places = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("--Machine Properties--");
+            Console.WriteLine("Metal: ");
+            newCar.Metal = Console.ReadLine();
+
+            Console.WriteLine("Age: ");
+            newCar.Age = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Break (true/false): ");
+            newCar.Break = bool.Parse(Console.ReadLine());
+
+            Console.WriteLine("--Engine Properties--");
+            /*newCar.engine = new Engine();*/
+            newCar.engine.createEngine();
+
+            return newCar;
+
+        }
+
+    }
+
+    public class Engine
+    {
+        public int id { get; set; } = 0;
+        public string model_engine { get; set; } = "None";
+        public int Cylinders { get; set; } = 0;
+        public int HorsePower { get; set; } = 0;
+        public bool Work = false;
+
+        public Engine createEngine()
+        {
+
+            Console.WriteLine("Model: ");
+            string Model_engine = Console.ReadLine();
+            Console.WriteLine("Cylinders: ");
+            int cylinders = int.Parse(Console.ReadLine());
+            Console.WriteLine("HorsePower: ");
+            int horsePower = int.Parse(Console.ReadLine());
+
+            return new Engine { Cylinders = Cylinders, HorsePower = horsePower, model_engine = Model_engine };
+        }
+
+        public void Start()
+        {
+            if (!Work) { Work = true; } else { Console.WriteLine("The engine is already running"); }
+        }
+
+        public void Stop()
+        {
+            if (Work) { Work = false; } else { Console.WriteLine("The engine is no longer running"); }
+        }
+
+
+        public void Upgrade(int extraHorsPower)
+        {
+            HorsePower = extraHorsPower;
+        }
+
+    }
+}
+\end{lstlisting}
+
+\vspace{12pt}
+
+\noindent Листинг веб-сервиса (asmx.cs):
+
+\begin{lstlisting}[language=Python]
+using dll;
+using System;
+using System.ComponentModel;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Services;
+
+namespace freakWeb
+{
+
+[WebService(Namespace = "http://tempuri.org/")]
+	[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+	[System.ComponentModel.ToolboxItem(false)]
+
+
+public class WebService1 : System.Web.Services.WebService
+{
+
+private string connectionString = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+
+[WebMethod]
+public int CreateCars(string metal, int age, string model, bool @break, int places)
+{
+		using (SqlConnection connection = new SqlConnection(connectionString))
+		{
+				connection.Open();
+				string sqlInsertMachine = "INSERT INTO Machines (Metal, Age, [Break]) VALUES (@Metal, @Age, @Break); SELECT SCOPE_IDENTITY();";
+				int machineId;
+				using (SqlCommand command = new SqlCommand(sqlInsertMachine, connection))
+				{
+						command.Parameters.Add("@Metal", SqlDbType.NVarChar, 50).Value = metal;
+						command.Parameters.Add("@Age", SqlDbType.Int).Value = age;
+						command.Parameters.Add("@Break", SqlDbType.Bit).Value = @break;
+						machineId = Convert.ToInt32(command.ExecuteScalar());
+					}
+
+
+				string sql = "INSERT INTO Cars (Model, Places, Id) VALUES (@Model, @Places, @Id); SELECT SCOPE_IDENTITY();";
+
+				using (SqlCommand command = new SqlCommand(sql, connection))
+				{
+						command.Parameters.Add("@Id", SqlDbType.Int).Value = machineId;
+						command.Parameters.Add("@Model", SqlDbType.NVarChar, 50).Value = model;
+						command.Parameters.Add("@Places", SqlDbType.Int).Value = places;
+						command.ExecuteNonQuery();
+						return machineId;
+					}
+			}
+	}
+
+	[WebMethod]
+public BindingList<Car> GetAllCars()
+{
+		BindingList<Car> cars = new BindingList<Car>();
+
+		using (SqlConnection connection = new SqlConnection(connectionString))
+		{
+				connection.Open();
+				string sql = "SELECT * FROM Cars";
+
+				using (SqlCommand command = new SqlCommand(sql, connection))
+				{
+						using (SqlDataReader reader = command.ExecuteReader())
+						{
+								while (reader.Read())
+								{
+										Car car = new Car
+											{
+												id = (int)reader["Id"],
+												Model = reader["Model"] == DBNull.Value ? null : (string)reader["Model"],
+												Places = reader["Places"] == DBNull.Value ? 0 : (int)reader["Places"],
+												Drive = reader["Drive"] == DBNull.Value ? false : (bool)reader["Drive"],
+
+											};
+										cars.Add(car);
+									}
+							}
+					}
+			}
+		return cars;
+	}
+}
+}
+\end{lstlisting}
+
+\vspace{12pt}
+
+\noindent Листинг приложения Windows Forms
+
+\begin{lstlisting}[language=Python]
+using Forms.ServiceReference1;
+using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using System.Xml.Serialization;
+
+namespace Forms
+{
+    public partial class Form1 : Form
+    {
+        private BindingList<Car> car_list = new BindingList<Car>();
+        public int count_car = 1;
+        public Form1()
+        {
+            InitializeComponent();
+            // dataGridView1.DataSource = car_list;
+            comboBox1.Items.AddRange(new object[] { "id", "Metal", "Age", "Break" });
+        }
+
+        private void Search_Click_1(object sender, EventArgs e)
+        {
+            string searchValue = textBox1.Text;
+            string chouse = comboBox1.Text;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.White; // сброс цвета
+
+                if (row.Cells[chouse].Value?.ToString() == searchValue)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Tan;
+                }
+            }
+        }
+
+        private void ClearShearch_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                row.DefaultCellStyle.BackColor = Color.White;
+            }
+        }
+
+        private void CreateCustomCar_Click_1(object sender, EventArgs e)
+        {
+            bool Break = inputBreak.Checked;
+
+            string Model = inputModel.Text;
+            string Metal = inputMetal.Text;
+            int Age = int.Parse(inputAge.Text);
+            int places = int.Parse(inputPlaces.Text);
+
+            using (WebService1SoapClient client = new WebService1SoapClient())
+            {
+                client.CreateCars(Metal, Age, Model, Break, places);
+            }
+        }
+        private void SaveCarToXml(BindingList<Car> car, string filePath)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(BindingList<Car>));
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                serializer.Serialize(writer, car);
+            }
+        }
+
+        private BindingList<Car> LoadCarFromXml(string filePath)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(BindingList<Car>));
+            using (StreamReader reader = new StreamReader(filePath))
+            {
+                return (BindingList<Car>)serializer.Deserialize(reader);
+            }
+        }
+
+        private void Grid2xml_Click_1(object sender, EventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                SaveCarToXml(car_list, saveDialog.FileName);
+            }
+        }
+
+        private void Xml2grid_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openDialog = new OpenFileDialog();
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                car_list = LoadCarFromXml(openDialog.FileName);
+                dataGridView1.DataSource = car_list;
+            }
+        }
+
+        private void CreateTestCar_Click_1(object sender, EventArgs e)
+        {
+            Car car = new Car
+            {
+                id = count_car,
+                Model = "Tesla",
+                Metal = "Aluminum",
+                Age = 2,
+                Break = false,
+            };
+            car_list.Add(car);
+            count_car++;
+        }
+
+
+        private async void Sql2grid_Click(object sender, EventArgs e)
+        {
+            WebService1SoapClient client = new WebService1SoapClient();
+
+            ServiceReference1.GetAllCarsResponse response = await client.GetAllCarsAsync();
+
+            BindingList<ServiceReference1.Car> cars = new BindingList<ServiceReference1.Car>(response.Body.GetAllCarsResult);
+
+            dataGridView1.DataSource = cars;
+
+            if (client.State != System.ServiceModel.CommunicationState.Faulted)
+            {
+                client.Close();
+            }
+        }
+
+    }
+}
+\end{lstlisting}
+
+\vspace{12pt}
+
+\noindent Листинг SQL скриптов:
+
+\begin{itemize}
+	\item cars.sql
+
+	      \begin{lstlisting}[language = Python]
+CREATE TABLE [dbo].[Car] (
+    [Id] INT NOT NULL PRIMARY KEY,
+    [Model] NVARCHAR(10) NULL DEFAULT 'None',
+);
+
+
+\end{lstlisting}
+
+	\item engine.sql
+
+	      \begin{lstlisting}[language = Python]
+CREATE TABLE [dbo].[Engines] (
+    [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [ModelEngine] NVARCHAR(10) NULL DEFAULT 'None', 
+    [Cylinders] INT NULL DEFAULT 0,
+    [HorsePower] INT NULL DEFAULT 0,
+    [Work] BIT NULL DEFAULT 0
+);
+
+\end{lstlisting}
+
+	      \break
+
+	\item machine.sql
+
+	      \begin{lstlisting}[language = Python ]
+CREATE TABLE [dbo].[Machines]
+(
+    [Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [Metal] NVARCHAR(10) NULL DEFAULT 'None',   
+    [Age] INT NULL DEFAULT 0,
+    [Break] BIT NULL DEFAULT 0 
+)
+\end{lstlisting}
+
+\end{itemize}
+
+\subsection*{Результаты работы программы:}
+
+\end{document}

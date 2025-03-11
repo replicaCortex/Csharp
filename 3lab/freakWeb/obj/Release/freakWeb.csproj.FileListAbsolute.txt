@@ -51,13 +51,13 @@ C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\roslyn\vbc.rsp
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\roslyn\VBCSCompiler.exe
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\DB.dll
+C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\dll.dll
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\DB.pdb
+C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\dll.pdb
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\obj\Release\freakWeb.csproj.AssemblyReference.cache
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\obj\Release\freakWeb.csproj.CoreCompileInputs.cache
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\obj\Release\freakWeb.csproj.Up2Date
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\obj\Release\freakWeb.dll
 C:\Users\replica\Desktop\Csharp\3lab\freakWeb\obj\Release\freakWeb.pdb
-C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\dll.dll
-C:\Users\replica\Desktop\Csharp\3lab\freakWeb\bin\dll.pdb

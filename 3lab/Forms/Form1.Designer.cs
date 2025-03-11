@@ -35,13 +35,13 @@
             this.inputMetal = new System.Windows.Forms.TextBox();
             this.inputAge = new System.Windows.Forms.TextBox();
             this.inputBreak = new System.Windows.Forms.CheckBox();
-            this.CreateTestCar = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.Button();
             this.clearShearch = new System.Windows.Forms.Button();
             this.CreateCustomCar = new System.Windows.Forms.Button();
             this.Grid2xml = new System.Windows.Forms.Button();
             this.Xml2grid = new System.Windows.Forms.Button();
-            this.TestWWF = new System.Windows.Forms.Button();
+            this.Sql2grid = new System.Windows.Forms.Button();
+            this.inputPlaces = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,20 +50,20 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-45, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(500, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 212);
+            this.comboBox1.Location = new System.Drawing.Point(12, 186);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 186);
+            this.textBox1.Location = new System.Drawing.Point(12, 160);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 20);
             this.textBox1.TabIndex = 2;
@@ -74,6 +74,7 @@
             this.inputModel.Name = "inputModel";
             this.inputModel.Size = new System.Drawing.Size(100, 20);
             this.inputModel.TabIndex = 3;
+            this.inputModel.Text = "Model";
             // 
             // inputMetal
             // 
@@ -81,6 +82,7 @@
             this.inputMetal.Name = "inputMetal";
             this.inputMetal.Size = new System.Drawing.Size(100, 20);
             this.inputMetal.TabIndex = 4;
+            this.inputMetal.Text = "Metal";
             // 
             // inputAge
             // 
@@ -88,11 +90,12 @@
             this.inputAge.Name = "inputAge";
             this.inputAge.Size = new System.Drawing.Size(100, 20);
             this.inputAge.TabIndex = 5;
+            this.inputAge.Text = "Age";
             // 
             // inputBreak
             // 
             this.inputBreak.AutoSize = true;
-            this.inputBreak.Location = new System.Drawing.Point(345, 264);
+            this.inputBreak.Location = new System.Drawing.Point(451, 188);
             this.inputBreak.Name = "inputBreak";
             this.inputBreak.Size = new System.Drawing.Size(53, 17);
             this.inputBreak.TabIndex = 7;
@@ -100,19 +103,9 @@
             this.inputBreak.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.inputBreak.UseVisualStyleBackColor = true;
             // 
-            // CreateTestCar
-            // 
-            this.CreateTestCar.Location = new System.Drawing.Point(12, 157);
-            this.CreateTestCar.Name = "CreateTestCar";
-            this.CreateTestCar.Size = new System.Drawing.Size(121, 23);
-            this.CreateTestCar.TabIndex = 8;
-            this.CreateTestCar.Text = "TestCar";
-            this.CreateTestCar.UseVisualStyleBackColor = true;
-            this.CreateTestCar.Click += new System.EventHandler(this.CreateTestCar_Click_1);
-            // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(139, 186);
+            this.Search.Location = new System.Drawing.Point(139, 160);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(75, 20);
             this.Search.TabIndex = 9;
@@ -122,7 +115,7 @@
             // 
             // clearShearch
             // 
-            this.clearShearch.Location = new System.Drawing.Point(139, 211);
+            this.clearShearch.Location = new System.Drawing.Point(139, 185);
             this.clearShearch.Name = "clearShearch";
             this.clearShearch.Size = new System.Drawing.Size(75, 22);
             this.clearShearch.TabIndex = 10;
@@ -136,13 +129,13 @@
             this.CreateCustomCar.Name = "CreateCustomCar";
             this.CreateCustomCar.Size = new System.Drawing.Size(100, 23);
             this.CreateCustomCar.TabIndex = 11;
-            this.CreateCustomCar.Text = "Create";
+            this.CreateCustomCar.Text = "input sql";
             this.CreateCustomCar.UseVisualStyleBackColor = true;
             this.CreateCustomCar.Click += new System.EventHandler(this.CreateCustomCar_Click_1);
             // 
             // Grid2xml
             // 
-            this.Grid2xml.Location = new System.Drawing.Point(12, 239);
+            this.Grid2xml.Location = new System.Drawing.Point(12, 213);
             this.Grid2xml.Name = "Grid2xml";
             this.Grid2xml.Size = new System.Drawing.Size(121, 23);
             this.Grid2xml.TabIndex = 12;
@@ -152,7 +145,7 @@
             // 
             // Xml2grid
             // 
-            this.Xml2grid.Location = new System.Drawing.Point(12, 268);
+            this.Xml2grid.Location = new System.Drawing.Point(12, 242);
             this.Xml2grid.Name = "Xml2grid";
             this.Xml2grid.Size = new System.Drawing.Size(121, 23);
             this.Xml2grid.TabIndex = 13;
@@ -160,28 +153,35 @@
             this.Xml2grid.UseVisualStyleBackColor = true;
             this.Xml2grid.Click += new System.EventHandler(this.Xml2grid_Click_1);
             // 
-            // TestWWF
+            // Sql2grid
             // 
-            this.TestWWF.Location = new System.Drawing.Point(264, 157);
-            this.TestWWF.Name = "TestWWF";
-            this.TestWWF.Size = new System.Drawing.Size(75, 23);
-            this.TestWWF.TabIndex = 14;
-            this.TestWWF.Text = "test";
-            this.TestWWF.UseVisualStyleBackColor = true;
-            this.TestWWF.Click += new System.EventHandler(this.TestWWF_Click);
+            this.Sql2grid.Location = new System.Drawing.Point(451, 156);
+            this.Sql2grid.Name = "Sql2grid";
+            this.Sql2grid.Size = new System.Drawing.Size(100, 23);
+            this.Sql2grid.TabIndex = 0;
+            this.Sql2grid.Text = "load sql";
+            this.Sql2grid.Click += new System.EventHandler(this.Sql2grid_Click);
+            // 
+            // inputPlaces
+            // 
+            this.inputPlaces.Location = new System.Drawing.Point(345, 264);
+            this.inputPlaces.Name = "inputPlaces";
+            this.inputPlaces.Size = new System.Drawing.Size(100, 20);
+            this.inputPlaces.TabIndex = 14;
+            this.inputPlaces.Text = "Places";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(457, 301);
-            this.Controls.Add(this.TestWWF);
+            this.ClientSize = new System.Drawing.Size(574, 301);
+            this.Controls.Add(this.inputPlaces);
+            this.Controls.Add(this.Sql2grid);
             this.Controls.Add(this.Xml2grid);
             this.Controls.Add(this.Grid2xml);
             this.Controls.Add(this.CreateCustomCar);
             this.Controls.Add(this.clearShearch);
             this.Controls.Add(this.Search);
-            this.Controls.Add(this.CreateTestCar);
             this.Controls.Add(this.inputBreak);
             this.Controls.Add(this.inputAge);
             this.Controls.Add(this.inputMetal);
@@ -206,13 +206,13 @@
         private System.Windows.Forms.TextBox inputMetal;
         private System.Windows.Forms.TextBox inputAge;
         private System.Windows.Forms.CheckBox inputBreak;
-        private System.Windows.Forms.Button CreateTestCar;
         private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Button clearShearch;
         private System.Windows.Forms.Button CreateCustomCar;
         private System.Windows.Forms.Button Grid2xml;
         private System.Windows.Forms.Button Xml2grid;
-        private System.Windows.Forms.Button TestWWF;
+        private System.Windows.Forms.Button Sql2grid;
+        private System.Windows.Forms.TextBox inputPlaces;
     }
 }
 
