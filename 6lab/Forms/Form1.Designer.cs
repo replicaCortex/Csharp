@@ -74,6 +74,7 @@
             this.inputModel.Name = "inputModel";
             this.inputModel.Size = new System.Drawing.Size(100, 20);
             this.inputModel.TabIndex = 3;
+            this.inputModel.Text = "Model";
             // 
             // inputMetal
             // 
@@ -81,6 +82,7 @@
             this.inputMetal.Name = "inputMetal";
             this.inputMetal.Size = new System.Drawing.Size(100, 20);
             this.inputMetal.TabIndex = 4;
+            this.inputMetal.Text = "Metal";
             // 
             // inputAge
             // 
@@ -88,6 +90,7 @@
             this.inputAge.Name = "inputAge";
             this.inputAge.Size = new System.Drawing.Size(100, 20);
             this.inputAge.TabIndex = 5;
+            this.inputAge.Text = "Age";
             // 
             // inputBreak
             // 
@@ -166,7 +169,7 @@
             this.TestWWF.Name = "TestWWF";
             this.TestWWF.Size = new System.Drawing.Size(75, 23);
             this.TestWWF.TabIndex = 14;
-            this.TestWWF.Text = "test";
+            this.TestWWF.Text = "SaveW";
             this.TestWWF.UseVisualStyleBackColor = true;
             this.TestWWF.Click += new System.EventHandler(this.TestWWF_Click);
             // 

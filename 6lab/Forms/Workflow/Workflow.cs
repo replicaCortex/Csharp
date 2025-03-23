@@ -10,7 +10,7 @@ namespace Forms.Workflow
         public Activity WorkflowActivity { get; set; }
         public OutArgument<Car> NewCar { get; set; }
 
-        public CarWorkflow(string model, string metal, int age, bool breakStatus, string filePath)
+        public CarWorkflow(string model, string metal, int age, bool breakStatus,int id )
         {
 
             Variable<Car> carVariable = new Variable<Car>
@@ -28,13 +28,14 @@ namespace Forms.Workflow
                         Metal = new InArgument<string>(metal),
                         Age = new InArgument<int>(age),
                         Break = new InArgument<bool>(breakStatus),
+                        Id = new InArgument<int>(id),
                         CustomCar = new OutArgument<Car>(carVariable)
                     },
 
                     new SaveCarActivity
                     {
                         Car2Save =  new InArgument<Car>(carVariable),
-                        FilePath = new InArgument<string>(filePath)
+                        //FilePath = new InArgument<string>(filePath)
 
                     }
                 }

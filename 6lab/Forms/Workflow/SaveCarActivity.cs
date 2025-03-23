@@ -1,7 +1,8 @@
 ﻿using dll;
 using System.Activities;
+using System.ComponentModel;
 using System.IO;
-using System.Windows;
+using System.Windows.Forms;
 using System.Xml.Serialization;
 
 namespace Forms.Workflow
@@ -9,18 +10,22 @@ namespace Forms.Workflow
     public sealed class SaveCarActivity : CodeActivity
     {
         public InArgument<Car> Car2Save { get; set; }
-        public InArgument<string> FilePath { get; set; }
         protected override void Execute(CodeActivityContext context)
         {
             Car car = context.GetValue(Car2Save);
-            string filePath = context.GetValue(FilePath);
+            BindingList<Car> car_list = new BindingList<Car>();
+            car_list.Add(car);
 
-            XmlSerializer serializer = new XmlSerializer(typeof(Car));
-            using (TextWriter writer = new StreamWriter(filePath))
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            if (saveDialog.ShowDialog() == DialogResult.OK)
             {
-                serializer.Serialize(writer, car);
+                XmlSerializer serializer = new XmlSerializer(typeof(BindingList<Car>));
+                using (TextWriter writer = new StreamWriter(saveDialog.FileName))
+                {
+                    serializer.Serialize(writer, car_list);
+                }
             }
-            MessageBox.Show("Test SAVE");
+
         }
 
 

@@ -127,18 +127,20 @@ namespace Forms
             //int Age = int.Parse(inputAge.Text);
 
             CarWorkflow workflow = new CarWorkflow(
-                model: "Toyota",
-                metal: "Steel",
-                age: 5,
-                breakStatus: false,
-                filePath: "car.xml"
+                model: inputModel.Text,
+                metal: inputMetal.Text,
+                age: int.Parse(inputAge.Text),
+                breakStatus: inputBreak.Checked,
+                id: count_car
             );
 
-            // Запускаем рабочий процесс
+            count_car++;
+
             WorkflowInvoker.Invoke(workflow.WorkflowActivity);
 
 
         }
+
     }
 
 }
